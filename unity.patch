@@ -12,10 +12,10 @@ index 297e006..951af88 100644
      <div id="app" />
 diff --git style/custom.css style/custom.css
 new file mode 100644
-index 0000000..fc00e00
+index 0000000..92939ea
 --- /dev/null
 +++ style/custom.css
-@@ -0,0 +1,188 @@
+@@ -0,0 +1,193 @@
 +/* Unity Background */
 +#titlebar, .tab-header, .toolbar, #tabs-container {
 +  background-color: var(--colorAccentBg);
@@ -47,9 +47,13 @@ index 0000000..fc00e00
 +
 +
 +/* Active Title Bar */
-+.tab-position .tab.active .tab-header .title {
-+  opacity: 1;
-+  border-bottom: solid 1px var(--colorAccentFg);
++.tab.active {
++  border-bottom: solid 0.5px var(--colorAccentFg);
++  opacity: 0.5;
++}
++
++.tab.active>.tab-header {
++  background-color: var(--colorAccentBgDark);
 +}
 +
 +
@@ -65,7 +69,6 @@ index 0000000..fc00e00
 +  border: none;
 +  box-shadow: none !important;
 +  border-radius: 0;
-+  border-bottom: solid 1px var(--colorAccentFg);
 +}
 +
 +input.url {
@@ -90,6 +93,10 @@ index 0000000..fc00e00
 +}
 +
 +/* Toolbar */
++
++button:disabled {
++  opacity: 0.1;
++}
 +
 +button.button-toolbar.home {
 +  display: none;
@@ -145,7 +152,7 @@ index 0000000..fc00e00
 +
 +button.button-toolbar.back:before {
 +  position: absolute;
-+  left: 12px !important;
++  left: 15px !important;
 +  content: "";
 +  display: inline-block !important;
 +  width: 8px !important;
@@ -153,12 +160,11 @@ index 0000000..fc00e00
 +  border-left: 1px solid var(--colorAccentFg) !important;
 +  border-bottom: 1px solid var(--colorAccentFg) !important;
 +  transform: rotate(45deg) !important;
-+  /* margin-right: 0.5em !important; */
 +}
 +
 +button.button-toolbar.forward:before {
 +  position: relative;
-+  left: 12px !important;
++  left: 10px !important;
 +  content: "";
 +  display: inline-block !important;
 +  width: 8px !important;
@@ -166,7 +172,6 @@ index 0000000..fc00e00
 +  border-right: 1px solid var(--colorAccentFg) !important;
 +  border-top: 1px solid var(--colorAccentFg) !important;
 +  transform: rotate(45deg) !important;
-+  /* margin-right: 0.5em !important; */
 +}
 +
 +
