@@ -12,10 +12,10 @@ index 297e006..951af88 100644
      <div id="app" />
 diff --git style/custom.css style/custom.css
 new file mode 100644
-index 0000000..92939ea
+index 0000000..628c284
 --- /dev/null
 +++ style/custom.css
-@@ -0,0 +1,193 @@
+@@ -0,0 +1,230 @@
 +/* Unity Background */
 +#titlebar, .tab-header, .toolbar, #tabs-container {
 +  background-color: var(--colorAccentBg);
@@ -49,7 +49,7 @@ index 0000000..92939ea
 +/* Active Title Bar */
 +.tab.active {
 +  border-bottom: solid 0.5px var(--colorAccentFg);
-+  opacity: 0.5;
++  /*opacity: 0.5;*/
 +}
 +
 +.tab.active>.tab-header {
@@ -178,31 +178,68 @@ index 0000000..92939ea
 +
 +/* Find Pane */
 +input#fip-input-text {
-+  background: var(--colorBgLightIntense);
++  background: var(--colorAccentFg);
 +  border: none;
 +  box-shadow: none;
-+  border-bottom: solid 1px var(--colorHighlightBg);
++  border-bottom: solid 1px var(--colorAccentBgFadedMost);
 +  color: var(--colorHighlightBg);
 +  font-family: 'Hiragino Sans' !important;
 +  font-weight: 100 !important;
 +}
 +
 +.toolbar.icons.fip-controls {
-+  background-color: var(--colorBgLightIntense);
++  background-color: var(--colorAccentBgDarker);
 +}
 +
 +.find-in-page {
 +  font-family: 'Hiragino Sans';
 +  font-weight: 100;
++  background-color: var(--colorAccentFg);
++}
++
++.find-in-page .fip-input {
++  color: var(--colorAccentBgDarker);
 +}
 +
 +button.fip-previous,
 +button.fip-next,
 +button.fip-close {
-+  background-color: var(--colorBgLightIntense);
++  background-color: var(--colorAccentFg);
 +  background-image: none !important;
 +  border: none;
 +  box-shadow: none !important;
++}
++
++button.fip-previous>svg,
++button.fip-next>svg,
++button.fip-close>svg {
++  color: var(--colorAccentBg) !important;
++  fill: var(--colorAccentBg) !important;
++}
++
++#fip-matchcase {
++  background-color: var(--colorAccentFg);
++  color: var(--colorAccentBgDarker);
++}
++
++.toolbar.icons.fip-controls {
++  background-color: var(--colorAccentFg);
++  color: var(--colorAccentBgDarker);
++}
++
++.theme-dark input[type=checkbox], .theme-dark input[type=radio] {
++  border-color: var(--colorAccentBg);
++}
++
++button:focus:not([tabindex='-1']), input:focus:not([tabindex='-1']), input[type=button]:focus:not([tabindex='-1']), input[type=checkbox]:focus:not([tabindex='-1']), input[type=email]:focus:not([tabindex='-1']), input[type=number]:focus:not([tabindex='-1']), input[type=password]:focus:not([tabindex='-1']), input[type=radio]:focus:not([tabindex='-1']), input[type=search]:focus:not([tabindex='-1']), input[type=submit]:focus:not([tabindex='-1']), input[type=text]:focus:not([tabindex='-1']), select:focus:not([tabindex='-1']), textarea:focus:not([tabindex='-1']) {
++  border-color: var(--colorAccentBg);
++  box-shadow: -1 0 0 3px var(--colorAccentBg);
++}
++input[type=checkbox]:active:focus:after, input[type=checkbox]:active:focus:before, input[type=checkbox]:focus:after, input[type=checkbox]:focus:before, input[type=radio]:active:focus:after, input[type=radio]:active:focus:before, input[type=radio]:focus:after, input[type=radio]:focus:before {
++  background-color: var(--colorAccentBg);
++}
++input[type=checkbox]:after, input[type=checkbox]:before {
++  background-color: var(--colorAccentBg);
 +}
 +
 +/* Panel */
