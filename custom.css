@@ -80,6 +80,14 @@ section.filter-typedhistory>.omni-clickable>span {
   font-weight: 100;
 }
 
+/* Bookmark bar */
+.observer, .observer>button {
+  background-color: var(--colorAccentBg);
+}
+.bookmark-bar {
+  border-bottom-width: 0;
+}
+
 /* Extension Bar */
 button.button-toolbar.browserAction-button {
   background-color: var(--colorAccentBg) !important;

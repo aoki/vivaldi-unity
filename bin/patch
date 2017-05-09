@@ -1,0 +1,4 @@
+#!/bin/bash -eu
+
+patch -p0 -d /Applications/Vivaldi.app/Contents/Versions/*/Vivaldi\ Framework.framework/Resources/vivaldi < unity.patch
+
