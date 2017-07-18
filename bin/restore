@@ -1,4 +1,0 @@
-#!/bin/bash
-VERSION=$(/Applications/Vivaldi.app/Contents/MacOS/Vivaldi --version | cut -d ' ' -f 2)
-cp ./custom.css /Applications/Vivaldi.app/Contents/Versions/${VERSION}/Vivaldi\ Framework.framework/Resources/vivaldi/style/custom.css
-cp ./browser.html /Applications/Vivaldi.app/Contents/Versions/${VERSION}/Vivaldi\ Framework.framework/Resources/vivaldi/browser.html
