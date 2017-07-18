@@ -4,7 +4,7 @@
 }
 
 .tabs-top.color-behind-tabs-on #tabs-container {
-  background-image: none
+  background-image: none !important;
 }
 
 .title {
@@ -17,6 +17,9 @@
   display: none;
 }
 
+#tabs-container.top {
+  padding-top: 0px;
+}
 
 /* Active Title Bar */
 .tab.active {
@@ -282,3 +285,4 @@ input[type=checkbox]:after, input[type=checkbox]:before {
   font-weight: 300;
   font-family: 'Hiragino Sans';
 }
+
