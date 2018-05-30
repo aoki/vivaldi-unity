@@ -48,13 +48,13 @@
 input.url {
   background-color: var(--colorAccentBg);
   font-family: 'Hiragino Sans' !important;
-  font-weight: 100 !important;
+  /* font-weight: 100 !important; */
 }
 
 .urlSearch {
   font-family: 'Hiragino Sans';
   font-weight: 200;
-  background-color: var(--colorAccentBgDark) !important;
+  background-color: var(--colorAccentBg) !important;
 }
 
 .pageload.progress-done {
@@ -80,7 +80,11 @@ section.filter-typedhistory>label {
 }
 section.filter-typedhistory>.omni-clickable>span {
   font-family: 'Hiragino Sans';
-  font-weight: 100;
+  /* font-weight: 100; */
+}
+
+.filter-search, .filter-omni-typedhistory, .filter-history {
+  color: var(--colorAccentFg)
 }
 
 /* Bookmark bar */
@@ -285,4 +289,3 @@ input[type=checkbox]:after, input[type=checkbox]:before {
   font-weight: 300;
   font-family: 'Hiragino Sans';
 }
-

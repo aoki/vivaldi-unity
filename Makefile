@@ -1,6 +1,10 @@
 VERSION := $(shell /Applications/Vivaldi.app/Contents/MacOS/Vivaldi --version | cut -d ' ' -f 2)
 APP_PATH := /Applications/Vivaldi.app/Contents/Versions/${VERSION}/Vivaldi\ Framework.framework/Resources/vivaldi
 
+open:
+	open -a /Applications/Vivaldi.app --args --flag-switches-begin --debug-packed-apps --silent-debugger-extension-api --flag-switches-end
+.PHONY: open
+
 backup:
 	cp /style/custom.css .
 	cp /Applications/Vivaldi.app/Contents/Versions/${VERSION}/Vivaldi\ Framework.framework/Resources/vivaldi/browser.html .
@@ -15,3 +19,4 @@ diff:
 	diff ${APP_PATH}/style/custom.css ./custom.css
 	diff ${APP_PATH}/browser.html ./browser.html
 .PHONY: diff
+
